@@ -1,0 +1,36 @@
+### recuperar todas las peliculas
+
+GET http://localhost:1234/movies
+
+
+### recuperar una película por ID
+GET http://localhost:1234/movies/9e6106f0-848b-4810-a11a-3d832a5610f9
+
+### recuperar una película por género
+GET http://localhost:1234/movies?genre=drama
+
+
+### crear prlícula con POST
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "The Shawshank Redemption 2",
+    "year": 2000,
+    "director": "Frank Darabont",
+    "duration": 142,
+    "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+    "genre": [
+      "Drama"
+    ],
+    "rate": 3
+}
+
+### Actualziar película
+PATCH http://localhost:1234/movies/9e6106f0-848b-4810-a11a-3d832a5610f9
+Content-Type: application/json
+
+{
+  "year":1994
+}
+ 
